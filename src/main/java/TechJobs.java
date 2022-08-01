@@ -118,8 +118,32 @@ public class TechJobs {
     }
 
     // Print a list of jobs
-    private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
+    //implement printJobs
+    private static void printJobs(ArrayList<HashMap<String, String>> listJobs) {
+        if (listJobs.size() == 0) {
+            System.out.print("No Results");
+        } else {
+            for (HashMap<String, String> job : listJobs) {
+                System.out.println("\n*****");
+                for (Map.Entry<String, String> fields : job.entrySet()) {
+                    System.out.println(fields.getKey() + ": " + fields.getValue());
+                }
+                System.out.println("*****");
+            }
+        }
 
-        System.out.println("printJobs is not implemented yet");
+        //The below method is leaving a space after "No Results"
+//        if (listJobs.size() > 0) {
+//            for (HashMap<String,String> job : listJobs) {
+//                System.out.println("\n*****");
+//                for (Map.Entry<String, String> listOfJobs : job.entrySet()) {
+//                    System.out.println(listOfJobs.getKey() + ": " + listOfJobs.getValue());
+//                }
+//                System.out.println("*****");
+//            };
+//        } else {System.out.println("No Results");
+//        }
+
+        //System.out.println("printJobs is not implemented yet");
     }
 }
